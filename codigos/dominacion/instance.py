@@ -1,13 +1,13 @@
 
 def readInstance(path):
     instance = {}
-    with open("instances/Grid 2x2.txt", "r") as f:
+    with open(path, "r") as f:
         n = int(f.readline().strip())
         f.readline()
         instance['n'] = n
         instance['m'] = []
         instance['l'] = []
-        for _ in range(n):
+        for i in range(n):
             instance['m'].append([0] * n)
             instance['l'].append([])
         for i in range(n):
